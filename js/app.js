@@ -703,7 +703,7 @@ class RoutineApp {
 
     registerServiceWorker() {
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js').catch(err => {
+            navigator.serviceWorker.register('sw.js', { scope: '/routine-planner/' }).catch(err => {
                 console.log('ServiceWorker registration failed:', err);
             });
         }

@@ -5,26 +5,26 @@
 
 const CACHE_NAME = 'routine-planner-v1';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/manifest.json',
-    '/css/style.css',
-    '/js/app.js',
-    '/js/i18n.js',
-    '/js/locales/ko.json',
-    '/js/locales/en.json',
-    '/js/locales/ja.json',
-    '/js/locales/zh.json',
-    '/js/locales/es.json',
-    '/js/locales/pt.json',
-    '/js/locales/id.json',
-    '/js/locales/tr.json',
-    '/js/locales/de.json',
-    '/js/locales/fr.json',
-    '/js/locales/hi.json',
-    '/js/locales/ru.json',
-    '/icon-192.svg',
-    '/icon-512.svg'
+    '/routine-planner/',
+    '/routine-planner/index.html',
+    '/routine-planner/manifest.json',
+    '/routine-planner/css/style.css',
+    '/routine-planner/js/app.js',
+    '/routine-planner/js/i18n.js',
+    '/routine-planner/js/locales/ko.json',
+    '/routine-planner/js/locales/en.json',
+    '/routine-planner/js/locales/ja.json',
+    '/routine-planner/js/locales/zh.json',
+    '/routine-planner/js/locales/es.json',
+    '/routine-planner/js/locales/pt.json',
+    '/routine-planner/js/locales/id.json',
+    '/routine-planner/js/locales/tr.json',
+    '/routine-planner/js/locales/de.json',
+    '/routine-planner/js/locales/fr.json',
+    '/routine-planner/js/locales/hi.json',
+    '/routine-planner/js/locales/ru.json',
+    '/routine-planner/icon-192.svg',
+    '/routine-planner/icon-512.svg'
 ];
 
 // Install event
