@@ -1,0 +1,91 @@
+{
+  "app": {
+    "title": "Morgen-Routine-Planer",
+    "description": "Produktivitäts-App zur systematischen Verwaltung Ihrer Morgenroutine"
+  },
+  "tab": {
+    "planner": "📋 Planer",
+    "timer": "⏱️ Timer",
+    "calendar": "📅 Kalender",
+    "templates": "⭐ Vorlagen"
+  },
+  "planner": {
+    "wakeupTime": "Aufwachzeit",
+    "todayProgress": "Heutiger Fortschritt",
+    "completed": "Abgeschlossen",
+    "total": "Gesamt",
+    "totalTime": "Gesamtzeit",
+    "routines": "Morgenroutinen",
+    "routineName": "Routine-Name"
+  },
+  "timer": {
+    "selectRoutine": "Routine wählen"
+  },
+  "calendar": {
+    "mon": "Mo",
+    "tue": "Di",
+    "wed": "Mi",
+    "thu": "Do",
+    "fri": "Fr",
+    "sat": "Sa",
+    "sun": "So",
+    "streak": "Erfolgsserie",
+    "weeklyTotal": "Diese Woche"
+  },
+  "templates": {
+    "title": "Routine-Vorlagen",
+    "description": "Wählen Sie unten eine Vorlage aus, um Ihre Routinen automatisch einzurichten."
+  },
+  "template": {
+    "health": "Gesundheit",
+    "healthDesc": "Fokus auf Bewegung und Ernährung",
+    "productivity": "Produktivität",
+    "productivityDesc": "Fokus auf Effizienz und Planung",
+    "meditation": "Meditation",
+    "meditationDesc": "Fokus auf Achtsamkeit und Entspannung",
+    "sport": "Sport",
+    "sportDesc": "Priorität auf Sport"
+  },
+  "premium": {
+    "aiOptimization": "✨ KI-Routine-Optimierung",
+    "aiDescription": "KI analysiert Ihre Routine und bietet Optimierungsvorschläge."
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "notifications": "Benachrichtigungen",
+    "shareCard": "Routine-Karte teilen",
+    "export": "Daten exportieren",
+    "clearData": "Daten löschen"
+  },
+  "share": {
+    "title": "Meine Morgenroutine"
+  },
+  "button": {
+    "save": "Speichern",
+    "add": "+ Hinzufügen",
+    "cancel": "Abbrechen",
+    "start": "Starten",
+    "pause": "Pause",
+    "reset": "Zurücksetzen",
+    "next": "Nächste Routine",
+    "use": "Verwenden",
+    "watchAdOrBuy": "Anzeige ansehen oder kaufen",
+    "create": "Erstellen",
+    "export": "Exportieren",
+    "clear": "Löschen",
+    "download": "Herunterladen",
+    "copy": "Kopieren"
+  },
+  "quotes": [
+    "✨ Ihr Morgen bestimmt Ihren Tag.",
+    "🌅 Der frühe Vogel fängt den Wurm.",
+    "💪 Kleine Routinen schaffen großen Erfolg.",
+    "🎯 Planung ist der erste Schritt zum Erfolg.",
+    "🌟 Beginnen Sie jeden Tag mit neuen Möglichkeiten.",
+    "☀️ Ihre Morgengewohnheiten prägen Ihr Schicksal.",
+    "🚀 Die heutige Investition ist der morgige Erfolg.",
+    "🧘 Seelenfrieden ist der Anfang von allem.",
+    "📈 Konsistenz überwindet alles.",
+    "🏃 Handlung erzeugt Motivation."
+  ]
+}

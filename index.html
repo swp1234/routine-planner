@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="아침 루틴을 체계적으로 관리하는 생산성 앱. 시간표 설정, 타이머, 진행률 추적, 주간 달성 캘린더 기능">
+    <meta name="keywords" content="모닝루틴, 아침습관, 생산성, 루틴 관리, 타이머, 일상, 습관 형성">
+    <meta name="theme-color" content="#0f0f23">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Morning Routine">
+
+    <!-- OG Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Morning Routine Planner - 아침 루틴 플래너">
+    <meta property="og:description" content="매일 아침을 계획적으로 시작하세요. 시간표, 타이머, 진행률 추적으로 습관 형성을 돕습니다.">
+    <meta property="og:image" content="https://dopabrain.com/routine-planner/icon-512.svg">
+    <meta property="og:url" content="https://dopabrain.com/routine-planner/">
+    <meta property="og:site_name" content="DopaBrain">
+
+    <!-- Schema.org WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Morning Routine Planner",
+        "url": "https://dopabrain.com/routine-planner/",
+        "description": "아침 루틴을 체계적으로 관리하는 생산성 앱",
+        "applicationCategory": "ProductivityApplication",
+        "screenshot": [
+            {
+                "@type": "ImageObject",
+                "url": "https://dopabrain.com/routine-planner/icon-512.svg",
+                "width": 512,
+                "height": 512
+            }
+        ],
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+        }
+    }
+    </script>
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GSWM40TV"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J8GSWM40TV');
+    </script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3600813755953882"
+        crossorigin="anonymous"></script>
+
+    <title data-i18n="app.title">Morning Routine Planner - 모닝 루틴 플래너</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="icon-192.svg">
+    <link rel="apple-touch-icon" href="icon-192.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <h1 data-i18n="app.title">Morning Routine Planner</h1>
+                <div class="header-controls">
+                    <button id="lang-toggle" class="btn-icon" title="Language">🌐</button>
+                    <button id="settings-toggle" class="btn-icon" title="Settings">⚙️</button>
+                </div>
+            </div>
+
+            <!-- Language Menu -->
+            <div id="lang-menu" class="lang-menu hidden">
+                <button class="lang-option" data-lang="ko">🇰🇷 한국어</button>
+                <button class="lang-option" data-lang="en">🇺🇸 English</button>
+                <button class="lang-option" data-lang="ja">🇯🇵 日本語</button>
+                <button class="lang-option" data-lang="zh">🇨🇳 中文</button>
+                <button class="lang-option" data-lang="es">🇪🇸 Español</button>
+                <button class="lang-option" data-lang="pt">🇧🇷 Português</button>
+                <button class="lang-option" data-lang="id">🇮🇩 Bahasa</button>
+                <button class="lang-option" data-lang="tr">🇹🇷 Türkçe</button>
+                <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
+                <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
+                <button class="lang-option" data-lang="hi">🇮🇳 हिन्दी</button>
+                <button class="lang-option" data-lang="ru">🇷🇺 Русский</button>
+            </div>
+        </header>
+
+        <!-- Daily Quote -->
+        <section class="quote-section">
+            <p id="daily-quote" class="daily-quote">✨ "Start your day with purpose."</p>
+        </section>
+
+        <!-- Top Banner Ad -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-3600813755953882"
+                data-ad-slot="1234567890"
+                data-ad-format="horizontal"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="planner" data-i18n="tab.planner">📋 Planner</button>
+                <button class="tab-btn" data-tab="timer" data-i18n="tab.timer">⏱️ Timer</button>
+                <button class="tab-btn" data-tab="calendar" data-i18n="tab.calendar">📅 Calendar</button>
+                <button class="tab-btn" data-tab="templates" data-i18n="tab.templates">⭐ Templates</button>
+            </div>
+
+            <!-- Tab: Planner -->
+            <div class="tab-content active" id="planner-tab">
+                <!-- Wake-up Time Selection -->
+                <section class="section">
+                    <h2 data-i18n="planner.wakeupTime">기상 시간</h2>
+                    <div class="time-input-group">
+                        <input type="time" id="wakeup-time" value="06:00">
+                        <button id="save-wakeup-btn" class="btn-primary" data-i18n="button.save">저장</button>
+                    </div>
+                </section>
+
+                <!-- Progress Bar -->
+                <section class="section">
+                    <div class="progress-info">
+                        <span data-i18n="planner.todayProgress">오늘 진행률</span>
+                        <span id="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <div class="stat">
+                            <span data-i18n="planner.completed">완료</span>
+                            <span id="completed-count">0</span>
+                        </div>
+                        <div class="stat">
+                            <span data-i18n="planner.total">총</span>
+                            <span id="total-count">0</span>
+                        </div>
+                        <div class="stat">
+                            <span data-i18n="planner.totalTime">소요시간</span>
+                            <span id="total-time">0분</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Routine List -->
+                <section class="section">
+                    <div class="section-header">
+                        <h2 data-i18n="planner.routines">아침 루틴</h2>
+                        <button id="add-routine-btn" class="btn-icon-text" data-i18n="button.add">+ 추가</button>
+                    </div>
+
+                    <!-- Add Routine Form -->
+                    <div id="add-routine-form" class="routine-form hidden">
+                        <input type="text" id="routine-name" placeholder="루틴 이름" data-i18n-placeholder="planner.routineName">
+                        <input type="number" id="routine-duration" min="1" max="180" value="15" placeholder="분">
+                        <select id="routine-icon">
+                            <option value="☀️">☀️ 햇살</option>
+                            <option value="🚿">🚿 샤워</option>
+                            <option value="🍳">🍳 아침식사</option>
+                            <option value="📱">📱 핸드폰</option>
+                            <option value="🧘">🧘 명상</option>
+                            <option value="🏃">🏃 운동</option>
+                            <option value="📖">📖 독서</option>
+                            <option value="✍️">✍️ 일지</option>
+                            <option value="💄">💄 화장</option>
+                            <option value="👔">👔 옷차림</option>
+                            <option value="🧠">🧠 학습</option>
+                            <option value="💼">💼 일준비</option>
+                            <option value="🎵">🎵 음악</option>
+                            <option value="🌱">🌱 스트레칭</option>
+                            <option value="📝">📝 계획</option>
+                        </select>
+                        <div class="form-buttons">
+                            <button id="add-routine-confirm" class="btn-primary" data-i18n="button.add">추가</button>
+                            <button id="add-routine-cancel" class="btn-secondary" data-i18n="button.cancel">취소</button>
+                        </div>
+                    </div>
+
+                    <!-- Routines Draggable List -->
+                    <ul id="routine-list" class="routine-list">
+                        <!-- Populated by JS -->
+                    </ul>
+                </section>
+
+                <!-- Premium: AI Optimization -->
+                <section class="section premium-section">
+                    <div class="premium-content">
+                        <h3 data-i18n="premium.aiOptimization">✨ AI 루틴 최적화 제안</h3>
+                        <p data-i18n="premium.aiDescription">AI가 당신의 루틴을 분석하고 최적화 제안을 해줍니다.</p>
+                        <button id="premium-ai-btn" class="btn-premium" data-i18n="button.watchAdOrBuy">광고 보기 또는 구매</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tab: Timer -->
+            <div class="tab-content" id="timer-tab">
+                <section class="section">
+                    <div class="timer-container">
+                        <div id="timer-display" class="timer-display">00:00</div>
+                        <div id="current-routine" class="current-routine">선택된 루틴 없음</div>
+
+                        <div class="timer-controls">
+                            <button id="timer-start-btn" class="btn-primary-large" data-i18n="button.start">시작</button>
+                            <button id="timer-pause-btn" class="btn-secondary-large hidden" data-i18n="button.pause">일시중지</button>
+                            <button id="timer-reset-btn" class="btn-secondary" data-i18n="button.reset">리셋</button>
+                            <button id="timer-next-btn" class="btn-primary" data-i18n="button.next">다음 루틴</button>
+                        </div>
+
+                        <div class="timer-select">
+                            <label data-i18n="timer.selectRoutine">루틴 선택</label>
+                            <select id="timer-routine-select">
+                                <option value="">-- 없음 --</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tab: Calendar -->
+            <div class="tab-content" id="calendar-tab">
+                <section class="section">
+                    <div class="calendar-header">
+                        <button id="prev-week" class="btn-icon">◀</button>
+                        <h2 id="week-display">주간 달성</h2>
+                        <button id="next-week" class="btn-icon">▶</button>
+                    </div>
+
+                    <div class="week-calendar">
+                        <div class="day-card">
+                            <div class="day-label" data-i18n="calendar.mon">월</div>
+                            <div class="day-number">1</div>
+                            <input type="checkbox" class="day-check" data-day="1">
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-label" data-i18n="calendar.tue">화</div>
+                            <div class="day-number">2</div>
+                            <input type="checkbox" class="day-check" data-day="2">
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-label" data-i18n="calendar.wed">수</div>
+                            <div class="day-number">3</div>
+                            <input type="checkbox" class="day-check" data-day="3">
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-label" data-i18n="calendar.thu">목</div>
+                            <div class="day-number">4</div>
+                            <input type="checkbox" class="day-check" data-day="4">
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-label" data-i18n="calendar.fri">금</div>
+                            <div class="day-number">5</div>
+                            <input type="checkbox" class="day-check" data-day="5">
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-label" data-i18n="calendar.sat">토</div>
+                            <div class="day-number">6</div>
+                            <input type="checkbox" class="day-check" data-day="6">
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-label" data-i18n="calendar.sun">일</div>
+                            <div class="day-number">7</div>
+                            <input type="checkbox" class="day-check" data-day="7">
+                            <span class="checkmark"></span>
+                        </div>
+                    </div>
+
+                    <div class="calendar-stats">
+                        <div class="stat-box">
+                            <span data-i18n="calendar.streak">연속 달성</span>
+                            <span id="streak-count" class="stat-value">0일</span>
+                        </div>
+                        <div class="stat-box">
+                            <span data-i18n="calendar.weeklyTotal">이번 주</span>
+                            <span id="weekly-total" class="stat-value">0일</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tab: Templates -->
+            <div class="tab-content" id="templates-tab">
+                <section class="section">
+                    <h2 data-i18n="templates.title">루틴 템플릿</h2>
+                    <p data-i18n="templates.description">아래 템플릿을 선택하면 자동으로 루틴이 설정됩니다.</p>
+
+                    <div class="templates-grid">
+                        <!-- Health Template -->
+                        <div class="template-card">
+                            <div class="template-icon">💪</div>
+                            <h3 data-i18n="template.health">건강형</h3>
+                            <p data-i18n="template.healthDesc">운동과 영양 중심</p>
+                            <button class="btn-template" data-template="health" data-i18n="button.use">사용</button>
+                        </div>
+
+                        <!-- Productivity Template -->
+                        <div class="template-card">
+                            <div class="template-icon">🚀</div>
+                            <h3 data-i18n="template.productivity">생산성형</h3>
+                            <p data-i18n="template.productivityDesc">효율성과 계획 중심</p>
+                            <button class="btn-template" data-template="productivity" data-i18n="button.use">사용</button>
+                        </div>
+
+                        <!-- Meditation Template -->
+                        <div class="template-card">
+                            <div class="template-icon">🧘</div>
+                            <h3 data-i18n="template.meditation">명상형</h3>
+                            <p data-i18n="template.meditationDesc">마음 챙김과 여유</p>
+                            <button class="btn-template" data-template="meditation" data-i18n="button.use">사용</button>
+                        </div>
+
+                        <!-- Sport Template -->
+                        <div class="template-card">
+                            <div class="template-icon">🏋️</div>
+                            <h3 data-i18n="template.sport">운동형</h3>
+                            <p data-i18n="template.sportDesc">운동 최우선</p>
+                            <button class="btn-template" data-template="sport" data-i18n="button.use">사용</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Bottom Banner Ad -->
+        <div class="ad-container ad-bottom">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-3600813755953882"
+                data-ad-slot="9876543210"
+                data-ad-format="horizontal"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Settings Modal -->
+        <div id="settings-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 data-i18n="settings.title">설정</h2>
+                    <button id="close-settings" class="btn-icon">✕</button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="setting-item">
+                        <label data-i18n="settings.notifications">알림</label>
+                        <input type="checkbox" id="notification-toggle" class="toggle-switch">
+                    </div>
+
+                    <div class="setting-item">
+                        <label data-i18n="settings.shareCard">루틴 카드 공유</label>
+                        <button id="share-card-btn" class="btn-secondary" data-i18n="button.create">생성</button>
+                    </div>
+
+                    <div class="setting-item">
+                        <label data-i18n="settings.export">데이터 내보내기</label>
+                        <button id="export-btn" class="btn-secondary" data-i18n="button.export">내보내기</button>
+                    </div>
+
+                    <div class="setting-item">
+                        <label data-i18n="settings.clearData">데이터 초기화</label>
+                        <button id="clear-btn" class="btn-danger" data-i18n="button.clear">초기화</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Share Modal -->
+        <div id="share-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 data-i18n="share.title">나의 모닝루틴</h2>
+                    <button id="close-share" class="btn-icon">✕</button>
+                </div>
+
+                <div id="share-card" class="share-card">
+                    <!-- Generated by JS -->
+                </div>
+
+                <div class="modal-buttons">
+                    <button id="download-card-btn" class="btn-primary" data-i18n="button.download">다운로드</button>
+                    <button id="copy-card-btn" class="btn-secondary" data-i18n="button.copy">복사</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

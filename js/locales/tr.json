@@ -1,0 +1,91 @@
+{
+  "app": {
+    "title": "Sabah Rutini Planlayıcı",
+    "description": "Sabah rutininizi sistematik olarak yönetmek için üretkenlik uygulaması"
+  },
+  "tab": {
+    "planner": "📋 Planlayıcı",
+    "timer": "⏱️ Zamanlayıcı",
+    "calendar": "📅 Takvim",
+    "templates": "⭐ Şablonlar"
+  },
+  "planner": {
+    "wakeupTime": "Uyanış Saati",
+    "todayProgress": "Bugünün İlerleme",
+    "completed": "Tamamlandı",
+    "total": "Toplam",
+    "totalTime": "Toplam Süre",
+    "routines": "Sabah Rutinleri",
+    "routineName": "Rutin Adı"
+  },
+  "timer": {
+    "selectRoutine": "Rutini Seç"
+  },
+  "calendar": {
+    "mon": "Pzt",
+    "tue": "Sal",
+    "wed": "Çar",
+    "thu": "Per",
+    "fri": "Cum",
+    "sat": "Cmt",
+    "sun": "Paz",
+    "streak": "Sürekli Başarı",
+    "weeklyTotal": "Bu Hafta"
+  },
+  "templates": {
+    "title": "Rutin Şablonları",
+    "description": "Rutinlerinizi otomatik olarak ayarlamak için aşağıdan bir şablon seçin."
+  },
+  "template": {
+    "health": "Sağlık",
+    "healthDesc": "Egzersiz ve beslenmeye odaklanmış",
+    "productivity": "Üretkenlik",
+    "productivityDesc": "Verimlilik ve planlama odaklı",
+    "meditation": "Meditasyon",
+    "meditationDesc": "Mindfulness ve rahatlama odaklı",
+    "sport": "Spor",
+    "sportDesc": "Spora öncelik"
+  },
+  "premium": {
+    "aiOptimization": "✨ AI Rutin Optimizasyonu",
+    "aiDescription": "AI rutininizi analiz eder ve optimizasyon önerileri sağlar."
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "notifications": "Bildirimler",
+    "shareCard": "Rutin Kartı Paylaş",
+    "export": "Verileri Dışa Aktar",
+    "clearData": "Verileri Temizle"
+  },
+  "share": {
+    "title": "Benim Sabah Rutini"
+  },
+  "button": {
+    "save": "Kaydet",
+    "add": "+ Ekle",
+    "cancel": "İptal",
+    "start": "Başla",
+    "pause": "Duraklat",
+    "reset": "Sıfırla",
+    "next": "Sonraki Rutin",
+    "use": "Kullan",
+    "watchAdOrBuy": "Reklam İzle veya Satın Al",
+    "create": "Oluştur",
+    "export": "Dışa Aktar",
+    "clear": "Temizle",
+    "download": "İndir",
+    "copy": "Kopyala"
+  },
+  "quotes": [
+    "✨ Sabahınız gününüzü belirler.",
+    "🌅 Erken kalkana Allah da yardım eder.",
+    "💪 Küçük rutinler büyük başarı yaratır.",
+    "🎯 Planlama başarıya giden ilk adımdır.",
+    "🌟 Her günü yeni fırsatlarla başlayın.",
+    "☀️ Sabah alışkanlıklarınız yazgınızı şekillendirir.",
+    "🚀 Bugünün yatırımı yarının başarısıdır.",
+    "🧘 Zihin huzuru her şeyin başladığı yerdir.",
+    "📈 Tutarlılık her şeyi yener.",
+    "🏃 Eylem motivasyon yaratır."
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "app": {
+    "title": "Planejador de Rotina Matinal",
+    "description": "Aplicativo de produtividade para gerenciar sua rotina matinal sistematicamente"
+  },
+  "tab": {
+    "planner": "📋 Planejador",
+    "timer": "⏱️ Cronômetro",
+    "calendar": "📅 Calendário",
+    "templates": "⭐ Modelos"
+  },
+  "planner": {
+    "wakeupTime": "Hora de Acordar",
+    "todayProgress": "Progresso de Hoje",
+    "completed": "Concluído",
+    "total": "Total",
+    "totalTime": "Tempo Total",
+    "routines": "Rotinas Matinais",
+    "routineName": "Nome da Rotina"
+  },
+  "timer": {
+    "selectRoutine": "Selecionar Rotina"
+  },
+  "calendar": {
+    "mon": "Seg",
+    "tue": "Ter",
+    "wed": "Qua",
+    "thu": "Qui",
+    "fri": "Sex",
+    "sat": "Sab",
+    "sun": "Dom",
+    "streak": "Sequência Contínua",
+    "weeklyTotal": "Esta Semana"
+  },
+  "templates": {
+    "title": "Modelos de Rotina",
+    "description": "Selecione um modelo abaixo para configurar automaticamente suas rotinas."
+  },
+  "template": {
+    "health": "Saúde",
+    "healthDesc": "Focado em exercício e nutrição",
+    "productivity": "Produtividade",
+    "productivityDesc": "Focado em eficiência e planejamento",
+    "meditation": "Meditação",
+    "meditationDesc": "Focado em atenção plena e relaxamento",
+    "sport": "Esporte",
+    "sportDesc": "Prioridade em exercício"
+  },
+  "premium": {
+    "aiOptimization": "✨ Otimização de Rotina com IA",
+    "aiDescription": "IA analisa sua rotina e fornece sugestões de otimização."
+  },
+  "settings": {
+    "title": "Configurações",
+    "notifications": "Notificações",
+    "shareCard": "Compartilhar Cartão de Rotina",
+    "export": "Exportar Dados",
+    "clearData": "Limpar Dados"
+  },
+  "share": {
+    "title": "Minha Rotina Matinal"
+  },
+  "button": {
+    "save": "Salvar",
+    "add": "+ Adicionar",
+    "cancel": "Cancelar",
+    "start": "Iniciar",
+    "pause": "Pausar",
+    "reset": "Reiniciar",
+    "next": "Próxima Rotina",
+    "use": "Usar",
+    "watchAdOrBuy": "Assistir Anúncio ou Comprar",
+    "create": "Criar",
+    "export": "Exportar",
+    "clear": "Limpar",
+    "download": "Baixar",
+    "copy": "Copiar"
+  },
+  "quotes": [
+    "✨ Sua manhã determina seu dia.",
+    "🌅 Deus ajuda quem cedo madruga.",
+    "💪 Pequenas rotinas criam grande sucesso.",
+    "🎯 O planejamento é o primeiro passo para o sucesso.",
+    "🌟 Comece cada dia com novas oportunidades.",
+    "☀️ Seus hábitos matinais moldam seu destino.",
+    "🚀 O investimento de hoje é o sucesso de amanhã.",
+    "🧘 A paz mental é onde tudo começa.",
+    "📈 A consistência supera tudo.",
+    "🏃 A ação cria motivação."
+  ]
+}

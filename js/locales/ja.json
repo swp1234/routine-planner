@@ -1,0 +1,91 @@
+{
+  "app": {
+    "title": "朝のルーティンプランナー",
+    "description": "朝のルーティンを体系的に管理する生産性アプリ"
+  },
+  "tab": {
+    "planner": "📋 プランナー",
+    "timer": "⏱️ タイマー",
+    "calendar": "📅 カレンダー",
+    "templates": "⭐ テンプレート"
+  },
+  "planner": {
+    "wakeupTime": "起床時間",
+    "todayProgress": "本日の進捗",
+    "completed": "完了",
+    "total": "合計",
+    "totalTime": "所要時間",
+    "routines": "朝のルーティン",
+    "routineName": "ルーティン名"
+  },
+  "timer": {
+    "selectRoutine": "ルーティンを選択"
+  },
+  "calendar": {
+    "mon": "月",
+    "tue": "火",
+    "wed": "水",
+    "thu": "木",
+    "fri": "金",
+    "sat": "土",
+    "sun": "日",
+    "streak": "連続達成",
+    "weeklyTotal": "今週"
+  },
+  "templates": {
+    "title": "ルーティンテンプレート",
+    "description": "下記のテンプレートを選択すると、自動的にルーティンが設定されます。"
+  },
+  "template": {
+    "health": "健康型",
+    "healthDesc": "運動と栄養に焦点",
+    "productivity": "生産性型",
+    "productivityDesc": "効率性と計画に焦点",
+    "meditation": "瞑想型",
+    "meditationDesc": "マインドフルネスとリラックス",
+    "sport": "スポーツ型",
+    "sportDesc": "運動を最優先"
+  },
+  "premium": {
+    "aiOptimization": "✨ AI ルーティン最適化提案",
+    "aiDescription": "AIがあなたのルーティンを分析し、最適化の提案を行います。"
+  },
+  "settings": {
+    "title": "設定",
+    "notifications": "通知",
+    "shareCard": "ルーティンカード共有",
+    "export": "データエクスポート",
+    "clearData": "データクリア"
+  },
+  "share": {
+    "title": "私の朝のルーティン"
+  },
+  "button": {
+    "save": "保存",
+    "add": "+ 追加",
+    "cancel": "キャンセル",
+    "start": "開始",
+    "pause": "一時停止",
+    "reset": "リセット",
+    "next": "次のルーティン",
+    "use": "使用",
+    "watchAdOrBuy": "広告を見るまたは購入",
+    "create": "作成",
+    "export": "エクスポート",
+    "clear": "クリア",
+    "download": "ダウンロード",
+    "copy": "コピー"
+  },
+  "quotes": [
+    "✨ 朝はあなたの一日を決めます。",
+    "🌅 早起きは三文の得。",
+    "💪 小さなルーティンが大きな成功を生み出します。",
+    "🎯 計画は成功の第一歩です。",
+    "🌟 毎日新しい機会で始めましょう。",
+    "☀️ あなたの朝の習慣があなたの運命を決めます。",
+    "🚀 今日の投資は明日の成功です。",
+    "🧘 心の平穏がすべての始まりです。",
+    "📈 継続がすべてを打ち勝ちます。",
+    "🏃 行動がやる気を生み出します。"
+  ]
+}

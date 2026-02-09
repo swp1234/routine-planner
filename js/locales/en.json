@@ -1,0 +1,91 @@
+{
+  "app": {
+    "title": "Morning Routine Planner",
+    "description": "Manage your morning routine systematically with productivity app"
+  },
+  "tab": {
+    "planner": "📋 Planner",
+    "timer": "⏱️ Timer",
+    "calendar": "📅 Calendar",
+    "templates": "⭐ Templates"
+  },
+  "planner": {
+    "wakeupTime": "Wake-up Time",
+    "todayProgress": "Today's Progress",
+    "completed": "Completed",
+    "total": "Total",
+    "totalTime": "Total Time",
+    "routines": "Morning Routines",
+    "routineName": "Routine Name"
+  },
+  "timer": {
+    "selectRoutine": "Select Routine"
+  },
+  "calendar": {
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "sun": "Sun",
+    "streak": "Streak",
+    "weeklyTotal": "This Week"
+  },
+  "templates": {
+    "title": "Routine Templates",
+    "description": "Select a template below to automatically set up your routines."
+  },
+  "template": {
+    "health": "Health",
+    "healthDesc": "Focus on exercise and nutrition",
+    "productivity": "Productivity",
+    "productivityDesc": "Focus on efficiency and planning",
+    "meditation": "Meditation",
+    "meditationDesc": "Focus on mindfulness and relaxation",
+    "sport": "Sport",
+    "sportDesc": "Focus on exercise first"
+  },
+  "premium": {
+    "aiOptimization": "✨ AI Routine Optimization",
+    "aiDescription": "AI analyzes your routine and provides optimization suggestions."
+  },
+  "settings": {
+    "title": "Settings",
+    "notifications": "Notifications",
+    "shareCard": "Share Routine Card",
+    "export": "Export Data",
+    "clearData": "Clear Data"
+  },
+  "share": {
+    "title": "My Morning Routine"
+  },
+  "button": {
+    "save": "Save",
+    "add": "+ Add",
+    "cancel": "Cancel",
+    "start": "Start",
+    "pause": "Pause",
+    "reset": "Reset",
+    "next": "Next Routine",
+    "use": "Use",
+    "watchAdOrBuy": "Watch Ad or Buy",
+    "create": "Create",
+    "export": "Export",
+    "clear": "Clear",
+    "download": "Download",
+    "copy": "Copy"
+  },
+  "quotes": [
+    "✨ Your morning determines your day.",
+    "🌅 The early bird catches the worm.",
+    "💪 Small routines create big success.",
+    "🎯 Planning is the first step to success.",
+    "🌟 Start each day with new opportunities.",
+    "☀️ Your morning habits shape your destiny.",
+    "🚀 Today's investment is tomorrow's success.",
+    "🧘 Peace of mind is where everything begins.",
+    "📈 Consistency overcomes everything.",
+    "🏃 Action creates motivation."
+  ]
+}

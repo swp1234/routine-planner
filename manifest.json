@@ -1,0 +1,64 @@
+{
+  "name": "Morning Routine Planner - 모닝 루틴 플래너",
+  "short_name": "Morning Routine",
+  "description": "아침 루틴을 체계적으로 관리하는 생산성 앱",
+  "start_url": "/routine-planner/index.html",
+  "scope": "/routine-planner/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f0f23",
+  "theme_color": "#f1c40f",
+  "icons": [
+    {
+      "src": "icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["productivity", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start Timer",
+      "short_name": "Timer",
+      "description": "Start your routine timer",
+      "url": "/routine-planner/?tab=timer",
+      "icons": [
+        {
+          "src": "icon-192.svg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "View Calendar",
+      "short_name": "Calendar",
+      "description": "Check your achievement calendar",
+      "url": "/routine-planner/?tab=calendar",
+      "icons": [
+        {
+          "src": "icon-192.svg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

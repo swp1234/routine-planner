@@ -1,0 +1,91 @@
+{
+  "app": {
+    "title": "Perencana Rutinitas Pagi",
+    "description": "Aplikasi produktivitas untuk mengelola rutinitas pagi Anda secara sistematis"
+  },
+  "tab": {
+    "planner": "📋 Perencana",
+    "timer": "⏱️ Pengatur Waktu",
+    "calendar": "📅 Kalender",
+    "templates": "⭐ Templat"
+  },
+  "planner": {
+    "wakeupTime": "Waktu Bangun",
+    "todayProgress": "Progres Hari Ini",
+    "completed": "Selesai",
+    "total": "Total",
+    "totalTime": "Total Waktu",
+    "routines": "Rutinitas Pagi",
+    "routineName": "Nama Rutinitas"
+  },
+  "timer": {
+    "selectRoutine": "Pilih Rutinitas"
+  },
+  "calendar": {
+    "mon": "Sen",
+    "tue": "Sel",
+    "wed": "Rab",
+    "thu": "Kam",
+    "fri": "Jum",
+    "sat": "Sab",
+    "sun": "Ming",
+    "streak": "Seri Berkelanjutan",
+    "weeklyTotal": "Minggu Ini"
+  },
+  "templates": {
+    "title": "Templat Rutinitas",
+    "description": "Pilih templat di bawah untuk mengatur rutinitas Anda secara otomatis."
+  },
+  "template": {
+    "health": "Kesehatan",
+    "healthDesc": "Fokus pada olahraga dan nutrisi",
+    "productivity": "Produktivitas",
+    "productivityDesc": "Fokus pada efisiensi dan perencanaan",
+    "meditation": "Meditasi",
+    "meditationDesc": "Fokus pada kesadaran dan relaksasi",
+    "sport": "Olahraga",
+    "sportDesc": "Prioritas pada olahraga"
+  },
+  "premium": {
+    "aiOptimization": "✨ Optimasi Rutinitas AI",
+    "aiDescription": "AI menganalisis rutinitas Anda dan memberikan saran optimasi."
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "notifications": "Notifikasi",
+    "shareCard": "Bagikan Kartu Rutinitas",
+    "export": "Ekspor Data",
+    "clearData": "Hapus Data"
+  },
+  "share": {
+    "title": "Rutinitas Pagi Saya"
+  },
+  "button": {
+    "save": "Simpan",
+    "add": "+ Tambah",
+    "cancel": "Batal",
+    "start": "Mulai",
+    "pause": "Jeda",
+    "reset": "Reset",
+    "next": "Rutinitas Berikutnya",
+    "use": "Gunakan",
+    "watchAdOrBuy": "Tonton Iklan atau Beli",
+    "create": "Buat",
+    "export": "Ekspor",
+    "clear": "Hapus",
+    "download": "Unduh",
+    "copy": "Salin"
+  },
+  "quotes": [
+    "✨ Pagi Anda menentukan hari Anda.",
+    "🌅 Burung awal yang mengambil cacing.",
+    "💪 Rutinitas kecil menciptakan kesuksesan besar.",
+    "🎯 Perencanaan adalah langkah pertama menuju kesuksesan.",
+    "🌟 Mulai setiap hari dengan peluang baru.",
+    "☀️ Kebiasaan pagi Anda membentuk takdir Anda.",
+    "🚀 Investasi hari ini adalah kesuksesan besok.",
+    "🧘 Ketenangan pikiran adalah awal segalanya.",
+    "📈 Konsistensi mengatasi segalanya.",
+    "🏃 Tindakan menciptakan motivasi."
+  ]
+}

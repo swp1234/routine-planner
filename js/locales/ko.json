@@ -1,0 +1,91 @@
+{
+  "app": {
+    "title": "Morning Routine Planner - 모닝 루틴 플래너",
+    "description": "아침 루틴을 체계적으로 관리하는 생산성 앱"
+  },
+  "tab": {
+    "planner": "📋 플래너",
+    "timer": "⏱️ 타이머",
+    "calendar": "📅 캘린더",
+    "templates": "⭐ 템플릿"
+  },
+  "planner": {
+    "wakeupTime": "기상 시간",
+    "todayProgress": "오늘 진행률",
+    "completed": "완료",
+    "total": "총",
+    "totalTime": "소요시간",
+    "routines": "아침 루틴",
+    "routineName": "루틴 이름"
+  },
+  "timer": {
+    "selectRoutine": "루틴 선택"
+  },
+  "calendar": {
+    "mon": "월",
+    "tue": "화",
+    "wed": "수",
+    "thu": "목",
+    "fri": "금",
+    "sat": "토",
+    "sun": "일",
+    "streak": "연속 달성",
+    "weeklyTotal": "이번 주"
+  },
+  "templates": {
+    "title": "루틴 템플릿",
+    "description": "아래 템플릿을 선택하면 자동으로 루틴이 설정됩니다."
+  },
+  "template": {
+    "health": "건강형",
+    "healthDesc": "운동과 영양 중심",
+    "productivity": "생산성형",
+    "productivityDesc": "효율성과 계획 중심",
+    "meditation": "명상형",
+    "meditationDesc": "마음 챙김과 여유",
+    "sport": "운동형",
+    "sportDesc": "운동 최우선"
+  },
+  "premium": {
+    "aiOptimization": "✨ AI 루틴 최적화 제안",
+    "aiDescription": "AI가 당신의 루틴을 분석하고 최적화 제안을 해줍니다."
+  },
+  "settings": {
+    "title": "설정",
+    "notifications": "알림",
+    "shareCard": "루틴 카드 공유",
+    "export": "데이터 내보내기",
+    "clearData": "데이터 초기화"
+  },
+  "share": {
+    "title": "나의 모닝루틴"
+  },
+  "button": {
+    "save": "저장",
+    "add": "+ 추가",
+    "cancel": "취소",
+    "start": "시작",
+    "pause": "일시중지",
+    "reset": "리셋",
+    "next": "다음 루틴",
+    "use": "사용",
+    "watchAdOrBuy": "광고 보기 또는 구매",
+    "create": "생성",
+    "export": "내보내기",
+    "clear": "초기화",
+    "download": "다운로드",
+    "copy": "복사"
+  },
+  "quotes": [
+    "✨ 아침은 당신의 하루를 결정합니다.",
+    "🌅 일찍 일어나는 새가 벌레를 잡습니다.",
+    "💪 작은 루틴이 큰 성공을 만듭니다.",
+    "🎯 계획은 성공의 첫 번째 단계입니다.",
+    "🌟 매일 새로운 기회로 시작하세요.",
+    "☀️ 아침의 습관이 당신의 운명을 만듭니다.",
+    "🚀 오늘의 투자가 내일의 성공입니다.",
+    "🧘 마음의 평온함에서 모든 것이 시작됩니다.",
+    "📈 꾸준함이 모든 것을 이깁니다.",
+    "🏃 동작이 동기를 만듭니다."
+  ]
+}

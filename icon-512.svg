@@ -1,0 +1,47 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#0f0f23"/>
+
+  <!-- Golden gradient circle -->
+  <defs>
+    <linearGradient id="goldenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f1c40f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f9b80d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer circle -->
+  <circle cx="256" cy="256" r="220" fill="url(#goldenGradient)" opacity="0.15"/>
+  <circle cx="256" cy="256" r="200" fill="url(#darkGradient)" stroke="#f1c40f" stroke-width="4"/>
+
+  <!-- Sun rays (morning theme) -->
+  <g stroke="#f1c40f" stroke-width="6" stroke-linecap="round">
+    <line x1="256" y1="30" x2="256" y2="70"/>
+    <line x1="256" y1="442" x2="256" y2="482"/>
+    <line x1="30" y1="256" x2="70" y2="256"/>
+    <line x1="442" y1="256" x2="482" y2="256"/>
+    <line x1="70" y1="70" x2="105" y2="105"/>
+    <line x1="407" y1="407" x2="442" y2="442"/>
+    <line x1="442" y1="70" x2="407" y2="105"/>
+    <line x1="105" y1="407" x2="70" y2="442"/>
+  </g>
+
+  <!-- Clock/timer icon -->
+  <circle cx="256" cy="256" r="130" fill="none" stroke="#f1c40f" stroke-width="6"/>
+
+  <!-- Clock hands -->
+  <line x1="256" y1="256" x2="256" y2="155" stroke="#f1c40f" stroke-width="6" stroke-linecap="round"/>
+  <line x1="256" y1="256" x2="330" y2="256" stroke="#f1c40f" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Center dot -->
+  <circle cx="256" cy="256" r="10" fill="#f1c40f"/>
+
+  <!-- Checkmark accent -->
+  <g stroke="#2ecc71" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 190 256 L 230 296 L 310 200"/>
+  </g>
+</svg>
