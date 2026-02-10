@@ -231,7 +231,7 @@ class RoutineApp {
         list.innerHTML = '';
 
         if (this.routines.length === 0) {
-            list.innerHTML = '<li style="text-align: center; color: var(--color-text-secondary); padding: 20px;">' + i18n.t('planner.routines') + ' 없음</li>';
+            list.innerHTML = '<li style="text-align: center; color: var(--color-text-secondary); padding: 20px;">' + i18n.t('noRoutines') + '</li>';
             return;
         }
 
@@ -244,7 +244,7 @@ class RoutineApp {
                 <div class="routine-icon">${routine.icon}</div>
                 <div class="routine-info">
                     <div class="routine-name">${routine.name}</div>
-                    <div class="routine-duration">${routine.duration}분</div>
+                    <div class="routine-duration">${routine.duration}${i18n.t('unit.minute')}</div>
                 </div>
                 <input type="checkbox" class="routine-checkbox" ${routine.completed ? 'checked' : ''}>
                 <button class="routine-delete">🗑️</button>
@@ -320,7 +320,7 @@ class RoutineApp {
         document.getElementById('progress-fill').style.width = percent + '%';
         document.getElementById('completed-count').textContent = completed;
         document.getElementById('total-count').textContent = total;
-        document.getElementById('total-time').textContent = totalTime + '분';
+        document.getElementById('total-time').textContent = totalTime + i18n.t('unit.minute');
     }
 
     /* ============================================================
@@ -335,7 +335,7 @@ class RoutineApp {
         this.routines.forEach(routine => {
             const option = document.createElement('option');
             option.value = routine.id;
-            option.textContent = routine.icon + ' ' + routine.name + ' (' + routine.duration + '분)';
+            option.textContent = routine.icon + ' ' + routine.name + ' (' + routine.duration + i18n.t('unit.minute') + ')';
             select.appendChild(option);
         });
 
@@ -500,8 +500,8 @@ class RoutineApp {
             checkDate.setDate(checkDate.getDate() - 1);
         }
 
-        document.getElementById('streak-count').textContent = streak + '일';
-        document.getElementById('weekly-total').textContent = weeklyCount + '일';
+        document.getElementById('streak-count').textContent = streak + i18n.t('unit.day');
+        document.getElementById('weekly-total').textContent = weeklyCount + i18n.t('unit.day');
     }
 
     getDateKey(date) {
@@ -513,35 +513,36 @@ class RoutineApp {
        ============================================================ */
 
     applyTemplate(templateName) {
+        const r = i18n.t('defaultRoutines');
         const templates = {
             health: [
-                { name: '물 마시기', duration: 5, icon: '💧' },
-                { name: '운동', duration: 30, icon: '🏃' },
-                { name: '샤워', duration: 20, icon: '🚿' },
-                { name: '아침식사', duration: 20, icon: '🍳' },
-                { name: '준비하기', duration: 15, icon: '👔' }
+                { name: r.drink, duration: 5, icon: '💧' },
+                { name: r.exercise, duration: 30, icon: '🏃' },
+                { name: r.shower, duration: 20, icon: '🚿' },
+                { name: r.breakfast, duration: 20, icon: '🍳' },
+                { name: r.prepare, duration: 15, icon: '👔' }
             ],
             productivity: [
-                { name: '기상', duration: 5, icon: '☀️' },
-                { name: '물 마시기', duration: 5, icon: '💧' },
-                { name: '명상/스트레칭', duration: 10, icon: '🧘' },
-                { name: '아침식사', duration: 20, icon: '🍳' },
-                { name: '일정 확인', duration: 10, icon: '📅' },
-                { name: '일시작', duration: 10, icon: '💼' }
+                { name: r.wakeup, duration: 5, icon: '☀️' },
+                { name: r.drink, duration: 5, icon: '💧' },
+                { name: r.meditation, duration: 10, icon: '🧘' },
+                { name: r.breakfast, duration: 20, icon: '🍳' },
+                { name: r.checkSchedule, duration: 10, icon: '📅' },
+                { name: r.startWork, duration: 10, icon: '💼' }
             ],
             meditation: [
-                { name: '기상', duration: 5, icon: '☀️' },
-                { name: '물 마시기', duration: 5, icon: '💧' },
-                { name: '명상', duration: 20, icon: '🧘' },
-                { name: '일지 쓰기', duration: 10, icon: '✍️' },
-                { name: '차 마시기', duration: 10, icon: '☕' }
+                { name: r.wakeup, duration: 5, icon: '☀️' },
+                { name: r.drink, duration: 5, icon: '💧' },
+                { name: r.meditation, duration: 20, icon: '🧘' },
+                { name: r.journal, duration: 10, icon: '✍️' },
+                { name: r.tea, duration: 10, icon: '☕' }
             ],
             sport: [
-                { name: '스트레칭', duration: 10, icon: '🌱' },
-                { name: '달리기', duration: 30, icon: '🏃' },
-                { name: '샤워', duration: 20, icon: '🚿' },
-                { name: '아침식사', duration: 20, icon: '🍳' },
-                { name: '준비', duration: 10, icon: '👔' }
+                { name: r.stretch, duration: 10, icon: '🌱' },
+                { name: r.running, duration: 30, icon: '🏃' },
+                { name: r.shower, duration: 20, icon: '🚿' },
+                { name: r.breakfast, duration: 20, icon: '🍳' },
+                { name: r.prepare, duration: 10, icon: '👔' }
             ]
         };
 
@@ -559,7 +560,7 @@ class RoutineApp {
         this.saveData();
         this.updateRoutineList();
         this.switchTab('planner');
-        this.notify(templateName + ' 템플릿 적용됨!');
+        this.notify(templateName + ' ' + i18n.t('planner.routines') + ' ' + i18n.t('button.copy') + '!');
     }
 
     /* ============================================================
@@ -597,21 +598,21 @@ class RoutineApp {
             <div class="share-card-routine">
                 <span class="share-card-routine-icon">${r.icon}</span>
                 <span>${r.name}</span>
-                <span style="margin-left: auto; color: var(--color-text-secondary);">${r.duration}분</span>
+                <span style="margin-left: auto; color: var(--color-text-secondary);">${r.duration}${i18n.t('unit.minute')}</span>
             </div>
         `).join('');
 
         card.innerHTML = `
-            <div class="share-card-title">✨ 나의 모닝루틴</div>
+            <div class="share-card-title">✨ ${i18n.t('shareCard.title')}</div>
             <div class="share-card-routines">${routinesHtml}</div>
             <div class="share-card-stats">
                 <div class="share-card-stat">
-                    <span class="share-card-stat-label">아침시간</span>
+                    <span class="share-card-stat-label">${i18n.t('shareCard.wakeupTime')}</span>
                     <span class="share-card-stat-value">${this.wakeupTime}</span>
                 </div>
                 <div class="share-card-stat">
-                    <span class="share-card-stat-label">소요시간</span>
-                    <span class="share-card-stat-value">${totalTime}분</span>
+                    <span class="share-card-stat-label">${i18n.t('shareCard.totalTime')}</span>
+                    <span class="share-card-stat-value">${totalTime}${i18n.t('unit.minute')}</span>
                 </div>
             </div>
         `;
@@ -664,9 +665,9 @@ class RoutineApp {
     }
 
     copyShareCard() {
-        const text = this.routines.map(r => r.icon + ' ' + r.name + ' (' + r.duration + '분)').join('\n');
-        navigator.clipboard.writeText('My Morning Routine:\n\n' + text + '\n\n기상시간: ' + this.wakeupTime);
-        this.notify('복사되었습니다!');
+        const text = this.routines.map(r => r.icon + ' ' + r.name + ' (' + r.duration + i18n.t('unit.minute') + ')').join('\n');
+        navigator.clipboard.writeText(i18n.t('shareCard.headerText') + ':\n\n' + text + '\n\n' + i18n.t('shareCard.wakeupLabel') + ': ' + this.wakeupTime);
+        this.notify(i18n.t('shareCard.copied') + '!');
     }
 
     /* ============================================================

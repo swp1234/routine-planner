@@ -87,5 +87,33 @@
     "🧘 Seelenfrieden ist der Anfang von allem.",
     "📈 Konsistenz überwindet alles.",
     "🏃 Handlung erzeugt Motivation."
-  ]
+  ],
+  "unit": {
+    "minute": "Min",
+    "day": "Tag"
+  },
+  "defaultRoutines": {
+    "drink": "Wasser trinken",
+    "exercise": "Bewegung",
+    "shower": "Duschen",
+    "breakfast": "Frühstück",
+    "prepare": "Vorbereitung",
+    "wakeup": "Aufwachen",
+    "meditation": "Meditation/Dehnung",
+    "checkSchedule": "Zeitplan prüfen",
+    "startWork": "Arbeit beginnen",
+    "stretch": "Dehnung",
+    "journal": "Tagebuch schreiben",
+    "tea": "Tee trinken",
+    "running": "Laufen"
+  },
+  "noRoutines": "Keine Routinen",
+  "shareCard": {
+    "title": "Meine Morgenroutine",
+    "wakeupTime": "Aufwachzeit",
+    "totalTime": "Gesamtzeit",
+    "copied": "Kopiert",
+    "headerText": "Meine Morgenroutine",
+    "wakeupLabel": "Aufwachzeit"
+  }
 }

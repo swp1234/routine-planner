@@ -87,5 +87,33 @@
     "🧘 Peace of mind is where everything begins.",
     "📈 Consistency overcomes everything.",
     "🏃 Action creates motivation."
-  ]
+  ],
+  "unit": {
+    "minute": "min",
+    "day": "day"
+  },
+  "defaultRoutines": {
+    "drink": "Drink Water",
+    "exercise": "Exercise",
+    "shower": "Shower",
+    "breakfast": "Breakfast",
+    "prepare": "Get Ready",
+    "wakeup": "Wake Up",
+    "meditation": "Meditation/Stretching",
+    "checkSchedule": "Check Schedule",
+    "startWork": "Start Work",
+    "stretch": "Stretching",
+    "journal": "Write Journal",
+    "tea": "Drink Tea",
+    "running": "Running"
+  },
+  "noRoutines": "No routines",
+  "shareCard": {
+    "title": "My Morning Routine",
+    "wakeupTime": "Wake-up Time",
+    "totalTime": "Total Time",
+    "copied": "Copied",
+    "headerText": "My Morning Routine",
+    "wakeupLabel": "Wake-up Time"
+  }
 }

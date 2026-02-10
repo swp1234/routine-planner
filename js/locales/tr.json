@@ -87,5 +87,33 @@
     "🧘 Zihin huzuru her şeyin başladığı yerdir.",
     "📈 Tutarlılık her şeyi yener.",
     "🏃 Eylem motivasyon yaratır."
-  ]
+  ],
+  "unit": {
+    "minute": "dk",
+    "day": "gün"
+  },
+  "defaultRoutines": {
+    "drink": "Su iç",
+    "exercise": "Egzersiz",
+    "shower": "Duş al",
+    "breakfast": "Kahvaltı",
+    "prepare": "Hazırlan",
+    "wakeup": "Uyan",
+    "meditation": "Meditasyon/Germe",
+    "checkSchedule": "Takvimi kontrol et",
+    "startWork": "İşe başla",
+    "stretch": "Germe",
+    "journal": "Günlük yaz",
+    "tea": "Çay iç",
+    "running": "Koşu"
+  },
+  "noRoutines": "Rutinler yok",
+  "shareCard": {
+    "title": "Benim Sabah Rutini",
+    "wakeupTime": "Uyanış Saati",
+    "totalTime": "Toplam Süre",
+    "copied": "Kopyalandı",
+    "headerText": "Benim Sabah Rutini",
+    "wakeupLabel": "Uyanış Saati"
+  }
 }

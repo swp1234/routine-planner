@@ -87,5 +87,33 @@
     "🧘 Ketenangan pikiran adalah awal segalanya.",
     "📈 Konsistensi mengatasi segalanya.",
     "🏃 Tindakan menciptakan motivasi."
-  ]
+  ],
+  "unit": {
+    "minute": "menit",
+    "day": "hari"
+  },
+  "defaultRoutines": {
+    "drink": "Minum air",
+    "exercise": "Olahraga",
+    "shower": "Mandi",
+    "breakfast": "Sarapan",
+    "prepare": "Bersiap",
+    "wakeup": "Bangun",
+    "meditation": "Meditasi/Peregangan",
+    "checkSchedule": "Periksa jadwal",
+    "startWork": "Mulai kerja",
+    "stretch": "Peregangan",
+    "journal": "Tulis jurnal",
+    "tea": "Minum teh",
+    "running": "Lari"
+  },
+  "noRoutines": "Tidak ada rutinitas",
+  "shareCard": {
+    "title": "Rutinitas Pagi Saya",
+    "wakeupTime": "Waktu Bangun",
+    "totalTime": "Total Waktu",
+    "copied": "Disalin",
+    "headerText": "Rutinitas Pagi Saya",
+    "wakeupLabel": "Waktu Bangun"
+  }
 }

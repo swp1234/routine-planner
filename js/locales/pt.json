@@ -87,5 +87,33 @@
     "🧘 A paz mental é onde tudo começa.",
     "📈 A consistência supera tudo.",
     "🏃 A ação cria motivação."
-  ]
+  ],
+  "unit": {
+    "minute": "min",
+    "day": "dia"
+  },
+  "defaultRoutines": {
+    "drink": "Beber água",
+    "exercise": "Exercício",
+    "shower": "Banho",
+    "breakfast": "Café da manhã",
+    "prepare": "Preparar-se",
+    "wakeup": "Acordar",
+    "meditation": "Meditação/Alongamento",
+    "checkSchedule": "Verificar cronograma",
+    "startWork": "Começar trabalho",
+    "stretch": "Alongamento",
+    "journal": "Escrever diário",
+    "tea": "Beber chá",
+    "running": "Corrida"
+  },
+  "noRoutines": "Sem rotinas",
+  "shareCard": {
+    "title": "Minha Rotina Matinal",
+    "wakeupTime": "Hora de Acordar",
+    "totalTime": "Tempo Total",
+    "copied": "Copiado",
+    "headerText": "Minha Rotina Matinal",
+    "wakeupLabel": "Hora de Acordar"
+  }
 }

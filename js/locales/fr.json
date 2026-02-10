@@ -87,5 +87,33 @@
     "🧘 La paix de l'esprit est le commencement de tout.",
     "📈 La constance surmonte tout.",
     "🏃 L'action crée la motivation."
-  ]
+  ],
+  "unit": {
+    "minute": "min",
+    "day": "jour"
+  },
+  "defaultRoutines": {
+    "drink": "Boire de l'eau",
+    "exercise": "Exercice",
+    "shower": "Douche",
+    "breakfast": "Petit-déjeuner",
+    "prepare": "Préparation",
+    "wakeup": "Réveil",
+    "meditation": "Méditation/Étirement",
+    "checkSchedule": "Vérifier le calendrier",
+    "startWork": "Commencer le travail",
+    "stretch": "Étirement",
+    "journal": "Écrire un journal",
+    "tea": "Boire du thé",
+    "running": "Courir"
+  },
+  "noRoutines": "Pas de routines",
+  "shareCard": {
+    "title": "Ma Routine Matinale",
+    "wakeupTime": "Heure du Réveil",
+    "totalTime": "Temps Total",
+    "copied": "Copié",
+    "headerText": "Ma Routine Matinale",
+    "wakeupLabel": "Heure du Réveil"
+  }
 }
