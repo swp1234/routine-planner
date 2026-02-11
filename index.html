@@ -16,6 +16,7 @@
     <meta property="og:description" content="매일 아침을 계획적으로 시작하세요. 시간표, 타이머, 진행률 추적으로 습관 형성을 돕습니다.">
     <meta property="og:image" content="https://dopabrain.com/routine-planner/icon-512.svg">
     <meta property="og:url" content="https://dopabrain.com/routine-planner/">
+    <link rel="canonical" href="https://dopabrain.com/routine-planner/">
     <meta property="og:site_name" content="DopaBrain">
 
     <!-- Schema.org WebApplication -->
@@ -63,12 +64,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="app-loader" id="app-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
     <div class="container">
         <!-- Header -->
         <header class="header">
             <div class="header-top">
                 <h1 data-i18n="app.title">Morning Routine Planner</h1>
                 <div class="header-controls">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀️</button>
                     <button id="lang-toggle" class="btn-icon" title="Language">🌐</button>
                     <button id="settings-toggle" class="btn-icon" title="Settings">⚙️</button>
                 </div>

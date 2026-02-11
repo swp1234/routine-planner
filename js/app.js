@@ -19,6 +19,7 @@ class RoutineApp {
     init() {
         this.loadData();
         this.setupEventListeners();
+        this.setupThemeToggle();
         this.updateUI();
         this.displayDailyQuote();
         this.registerServiceWorker();
@@ -139,6 +140,22 @@ class RoutineApp {
 
         // Language change event
         window.addEventListener('languageChanged', () => this.updateUI());
+    }
+
+    setupThemeToggle() {
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+            themeToggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                themeToggle.textContent = next === 'light' ? '🌙' : '☀️';
+            });
+        }
     }
 
     /* ============================================================
@@ -712,4 +729,15 @@ class RoutineApp {
 }
 
 // Initialize app
-const app = new RoutineApp();
+let app;
+try {
+    app = new RoutineApp();
+} catch(e) {
+    console.error('Init error:', e);
+} finally {
+    const loader = document.getElementById('app-loader');
+    if (loader) {
+        loader.classList.add('hidden');
+        setTimeout(() => loader.remove(), 300);
+    }
+}
