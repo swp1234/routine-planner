@@ -3,6 +3,10 @@
    Dark mode first, Glassmorphism, Microinteractions
    ============================================================ */
 
+/* Skip Link */
+.skip-link { position:absolute; top:-40px; left:0; background:var(--color-primary, #f1c40f); color:#fff; padding:8px 16px; z-index:10001; transition:top 0.3s; font-size:14px; text-decoration:none; }
+.skip-link:focus { top:0; }
+
 :root {
     --color-primary: #f1c40f;
     --color-dark-bg: #0f0f23;
