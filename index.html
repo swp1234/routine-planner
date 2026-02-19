@@ -77,6 +77,7 @@
                 <div class="header-controls">
                     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀️</button>
                     <button id="lang-toggle" class="btn-icon" title="Language">🌐</button>
+                    <button class="btn-icon share-btn" onclick="shareApp()" title="Share">🔗</button>
                     <button id="settings-toggle" class="btn-icon" title="Settings">⚙️</button>
                 </div>
             </div>
@@ -423,5 +424,22 @@
     </nav>
 
     <script src="/portal/js/cross-promo.js" defer></script>
+<script>
+function shareApp() {
+  const url = window.location.href;
+  if (navigator.share) {
+    navigator.share({ title: document.title, url }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(url).then(() => {
+      alert('링크가 복사되었습니다!');
+    });
+  }
+}
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
+</script>
 </body>
 </html>
