@@ -18,6 +18,12 @@
     "routines": "Routines Matinales",
     "routineName": "Nom de la Routine"
   },
+  "routine": {
+    "defaultQuote": "✨ \"Commencez votre journée avec intention.\"",
+    "noneSelected": "Aucune routine sélectionnée",
+    "weeklyGoal": "Progression hebdomadaire",
+    "none": "-- Aucun --"
+  },
   "timer": {
     "selectRoutine": "Sélectionner une Routine"
   },

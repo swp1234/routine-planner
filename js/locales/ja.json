@@ -18,6 +18,12 @@
     "routines": "朝のルーティン",
     "routineName": "ルーティン名"
   },
+  "routine": {
+    "defaultQuote": "✨ \"目的を持って一日を始めよう。\"",
+    "noneSelected": "ルーティン未選択",
+    "weeklyGoal": "週次達成",
+    "none": "-- なし --"
+  },
   "timer": {
     "selectRoutine": "ルーティンを選択"
   },

@@ -18,6 +18,12 @@
     "routines": "Утренние рутины",
     "routineName": "Название рутины"
   },
+  "routine": {
+    "defaultQuote": "✨ \"Начинайте день с целью.\"",
+    "noneSelected": "Режим не выбран",
+    "weeklyGoal": "Недельный прогресс",
+    "none": "-- Нет --"
+  },
   "timer": {
     "selectRoutine": "Выберите рутину"
   },

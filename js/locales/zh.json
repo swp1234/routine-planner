@@ -18,6 +18,12 @@
     "routines": "晨间例程",
     "routineName": "例程名称"
   },
+  "routine": {
+    "defaultQuote": "✨ \"有目的地开始新的一天。\"",
+    "noneSelected": "未选择例程",
+    "weeklyGoal": "周进度",
+    "none": "-- 无 --"
+  },
   "timer": {
     "selectRoutine": "选择例程"
   },

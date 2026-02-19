@@ -18,6 +18,12 @@
     "routines": "Rutinitas Pagi",
     "routineName": "Nama Rutinitas"
   },
+  "routine": {
+    "defaultQuote": "✨ \"Mulailah harimu dengan tujuan.\"",
+    "noneSelected": "Tidak ada rutinitas dipilih",
+    "weeklyGoal": "Kemajuan mingguan",
+    "none": "-- Tidak ada --"
+  },
   "timer": {
     "selectRoutine": "Pilih Rutinitas"
   },

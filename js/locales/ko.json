@@ -18,6 +18,12 @@
     "routines": "아침 루틴",
     "routineName": "루틴 이름"
   },
+  "routine": {
+    "defaultQuote": "✨ \"하루를 목적 있게 시작하세요.\"",
+    "noneSelected": "선택된 루틴 없음",
+    "weeklyGoal": "주간 달성",
+    "none": "-- 없음 --"
+  },
   "timer": {
     "selectRoutine": "루틴 선택"
   },

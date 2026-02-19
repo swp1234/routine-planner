@@ -101,7 +101,7 @@
 
         <!-- Daily Quote -->
         <section class="quote-section">
-            <p id="daily-quote" class="daily-quote">✨ "Start your day with purpose."</p>
+            <p id="daily-quote" class="daily-quote" data-i18n="routine.defaultQuote">✨ "Start your day with purpose."</p>
         </section>
 
         <!-- Top Banner Ad -->
@@ -217,7 +217,7 @@
                 <section class="section">
                     <div class="timer-container">
                         <div id="timer-display" class="timer-display">00:00</div>
-                        <div id="current-routine" class="current-routine">선택된 루틴 없음</div>
+                        <div id="current-routine" class="current-routine" data-i18n="routine.noneSelected">선택된 루틴 없음</div>
 
                         <div class="timer-controls">
                             <button id="timer-start-btn" class="btn-primary-large" data-i18n="button.start">시작</button>
@@ -229,7 +229,7 @@
                         <div class="timer-select">
                             <label data-i18n="timer.selectRoutine">루틴 선택</label>
                             <select id="timer-routine-select">
-                                <option value="">-- 없음 --</option>
+                                <option value="" data-i18n="routine.none">-- 없음 --</option>
                             </select>
                         </div>
                     </div>
@@ -241,7 +241,7 @@
                 <section class="section">
                     <div class="calendar-header">
                         <button id="prev-week" class="btn-icon">◀</button>
-                        <h2 id="week-display">주간 달성</h2>
+                        <h2 id="week-display" data-i18n="routine.weeklyGoal">주간 달성</h2>
                         <button id="next-week" class="btn-icon">▶</button>
                     </div>
 

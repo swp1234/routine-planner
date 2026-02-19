@@ -18,6 +18,12 @@
     "routines": "Sabah Rutinleri",
     "routineName": "Rutin Adı"
   },
+  "routine": {
+    "defaultQuote": "✨ \"Gününe amaçla başla.\"",
+    "noneSelected": "Rutin seçilmedi",
+    "weeklyGoal": "Haftalık İlerleme",
+    "none": "-- Yok --"
+  },
   "timer": {
     "selectRoutine": "Rutini Seç"
   },

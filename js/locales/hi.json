@@ -18,6 +18,12 @@
     "routines": "सुबह की दिनचर्या",
     "routineName": "दिनचर्या का नाम"
   },
+  "routine": {
+    "defaultQuote": "✨ \"अपना दिन उद्देश्य के साथ शुरू करें।\"",
+    "noneSelected": "कोई रूटीन नहीं चुना",
+    "weeklyGoal": "साप्ताहिक प्रगति",
+    "none": "-- कोई नहीं --"
+  },
   "timer": {
     "selectRoutine": "दिनचर्या चुनें"
   },
