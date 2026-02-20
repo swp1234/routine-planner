@@ -741,3 +741,6 @@ try {
         setTimeout(() => loader.remove(), 300);
     }
 }
+
+// Failsafe: ensure loader is hidden even if everything above fails
+setTimeout(() => { const l = document.getElementById('app-loader'); if (l) { l.classList.add('hidden'); setTimeout(() => l.remove(), 300); } }, 3000);
