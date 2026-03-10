@@ -126,5 +126,11 @@ class I18n {
     }
 }
 
-// Initialize on DOM ready
-const i18n = new I18n();
+// Initialize on DOM ready (IIFE with try-catch to prevent loader stuck)
+let i18n;
+try {
+    i18n = new I18n();
+} catch (e) {
+    console.error('i18n init error:', e);
+    i18n = { t: (key, def) => def || key, setLanguage: () => Promise.resolve(), getCurrentLanguage: () => 'en', updateUI: () => {} };
+}

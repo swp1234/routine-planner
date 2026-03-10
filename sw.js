@@ -3,7 +3,7 @@
  * Enables offline functionality and caching
  */
 
-const CACHE_NAME = 'routine-planner-v1';
+const CACHE_NAME = 'routine-planner-v2';
 const urlsToCache = [
     '/routine-planner/',
     '/routine-planner/index.html',
