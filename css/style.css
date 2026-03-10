@@ -1121,6 +1121,7 @@ input::placeholder {
     --color-text-primary: #1a1a2e;
     --color-text-secondary: #5a5a70;
     --color-text-tertiary: #999999;
+    --text: #1a1a2e;
 }
 
 [data-theme="light"] body {
