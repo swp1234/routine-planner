@@ -121,5 +121,12 @@
     "copied": "Kopyalandı",
     "headerText": "Benim Sabah Rutini",
     "wakeupLabel": "Uyanış Saati"
+  },
+  "related": {
+    "title": "Daha fazla keşfet",
+    "pomodoroTimer": "Pomodoro Zamanlayıcı",
+    "habitTracker": "Alışkanlık Takibi",
+    "todoList": "Yapılacaklar",
+    "ddayCounter": "Geri Sayım"
   }
 }

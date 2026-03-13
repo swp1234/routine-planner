@@ -121,5 +121,12 @@
     "copied": "Copiado",
     "headerText": "Mi Rutina Matinal",
     "wakeupLabel": "Hora de Despertar"
+  },
+  "related": {
+    "title": "Explora más",
+    "pomodoroTimer": "Temporizador Pomodoro",
+    "habitTracker": "Rastreador de hábitos",
+    "todoList": "Lista de tareas",
+    "ddayCounter": "Cuenta regresiva"
   }
 }

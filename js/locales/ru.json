@@ -121,5 +121,12 @@
     "copied": "Скопировано",
     "headerText": "Моя утренняя рутина",
     "wakeupLabel": "Время пробуждения"
+  },
+  "related": {
+    "title": "Ещё интересное",
+    "pomodoroTimer": "Помодоро-таймер",
+    "habitTracker": "Трекер привычек",
+    "todoList": "Список дел",
+    "ddayCounter": "Счётчик дней"
   }
 }

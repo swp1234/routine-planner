@@ -121,5 +121,12 @@
     "copied": "복사되었습니다",
     "headerText": "나의 모닝루틴",
     "wakeupLabel": "기상시간"
+  },
+  "related": {
+    "title": "더 많은 콘텐츠",
+    "pomodoroTimer": "포모도로 타이머",
+    "habitTracker": "습관 트래커",
+    "todoList": "할 일 목록",
+    "ddayCounter": "디데이 카운터"
   }
 }

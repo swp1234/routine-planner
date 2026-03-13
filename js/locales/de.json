@@ -121,5 +121,12 @@
     "copied": "Kopiert",
     "headerText": "Meine Morgenroutine",
     "wakeupLabel": "Aufwachzeit"
+  },
+  "related": {
+    "title": "Mehr entdecken",
+    "pomodoroTimer": "Pomodoro-Timer",
+    "habitTracker": "Gewohnheitstracker",
+    "todoList": "Aufgabenliste",
+    "ddayCounter": "D-Day-Zähler"
   }
 }

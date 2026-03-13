@@ -121,5 +121,12 @@
     "copied": "コピーしました",
     "headerText": "私の朝のルーティン",
     "wakeupLabel": "起床時間"
+  },
+  "related": {
+    "title": "もっと楽しむ",
+    "pomodoroTimer": "ポモドーロタイマー",
+    "habitTracker": "習慣トラッカー",
+    "todoList": "ToDoリスト",
+    "ddayCounter": "Dデイカウンター"
   }
 }

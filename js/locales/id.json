@@ -121,5 +121,12 @@
     "copied": "Disalin",
     "headerText": "Rutinitas Pagi Saya",
     "wakeupLabel": "Waktu Bangun"
+  },
+  "related": {
+    "title": "Jelajahi lainnya",
+    "pomodoroTimer": "Timer Pomodoro",
+    "habitTracker": "Pelacak Kebiasaan",
+    "todoList": "Daftar Tugas",
+    "ddayCounter": "Hitung Mundur"
   }
 }

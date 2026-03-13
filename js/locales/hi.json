@@ -121,5 +121,12 @@
     "copied": "कॉपी किया गया",
     "headerText": "मेरी सुबह की दिनचर्या",
     "wakeupLabel": "जागने का समय"
+  },
+  "related": {
+    "title": "और खोजें",
+    "pomodoroTimer": "पोमोडोरो टाइमर",
+    "habitTracker": "आदत ट्रैकर",
+    "todoList": "कार्य सूची",
+    "ddayCounter": "डी-डे काउंटर"
   }
 }
