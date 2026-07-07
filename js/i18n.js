@@ -8,6 +8,7 @@ class I18n {
         this.translations = {};
         this.supportedLanguages = ['ko', 'en', 'ja', 'zh', 'es', 'pt', 'id', 'tr', 'de', 'fr', 'hi', 'ru'];
         this.currentLang = this.detectLanguage();
+        document.documentElement.lang = this.currentLang;
         this.init();
     }
 
@@ -18,6 +19,14 @@ class I18n {
     }
 
     detectLanguage() {
+        try {
+            const params = new URLSearchParams(window.location.search || '');
+            const urlLang = params.get('lang');
+            if (urlLang && this.supportedLanguages.includes(urlLang)) {
+                return urlLang;
+            }
+        } catch (error) {}
+
         // 1. Check localStorage
         const saved = localStorage.getItem('selectedLanguage');
         if (saved && this.supportedLanguages.includes(saved)) {

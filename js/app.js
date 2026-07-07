@@ -298,7 +298,8 @@ class RoutineApp {
     dragOver(e) {
         e.preventDefault();
         e.dataTransfer.dropEffect = 'move';
-        e.target.closest('.routine-item')?.style.borderTop = '2px solid var(--color-primary)';
+        const targetItem = e.target.closest('.routine-item');
+        if (targetItem) targetItem.style.borderTop = '2px solid var(--color-primary)';
     }
 
     drop(e) {
