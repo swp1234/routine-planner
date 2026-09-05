@@ -20,6 +20,7 @@
   },
   "routine": {
     "defaultQuote": "✨ \"Comienza tu día con propósito.\"",
+    "boundary": "Tu rutina se guarda solo en este navegador. La herramienta no usa IA ni promete resultados.",
     "noneSelected": "Ninguna rutina seleccionada",
     "weeklyGoal": "Progreso semanal",
     "none": "-- Ninguno --"
@@ -52,10 +53,6 @@
     "sport": "Deporte",
     "sportDesc": "Prioridad en ejercicio"
   },
-  "premium": {
-    "aiOptimization": "✨ Optimización de Rutina con IA",
-    "aiDescription": "La IA analiza tu rutina y proporciona sugerencias de optimización."
-  },
   "settings": {
     "title": "Configuración",
     "notifications": "Notificaciones",
@@ -75,7 +72,6 @@
     "reset": "Reiniciar",
     "next": "Siguiente Rutina",
     "use": "Usar",
-    "watchAdOrBuy": "Ver Anuncio o Comprar",
     "create": "Crear",
     "export": "Exportar",
     "clear": "Limpiar",

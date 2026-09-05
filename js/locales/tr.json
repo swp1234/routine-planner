@@ -20,6 +20,7 @@
   },
   "routine": {
     "defaultQuote": "✨ \"Gününe amaçla başla.\"",
+    "boundary": "Rutininiz yalnızca bu tarayıcıda saklanır. Bu araç yapay zekâ kullanmaz veya sonuç vaat etmez.",
     "noneSelected": "Rutin seçilmedi",
     "weeklyGoal": "Haftalık İlerleme",
     "none": "-- Yok --"
@@ -52,10 +53,6 @@
     "sport": "Spor",
     "sportDesc": "Spora öncelik"
   },
-  "premium": {
-    "aiOptimization": "✨ AI Rutin Optimizasyonu",
-    "aiDescription": "AI rutininizi analiz eder ve optimizasyon önerileri sağlar."
-  },
   "settings": {
     "title": "Ayarlar",
     "notifications": "Bildirimler",
@@ -75,7 +72,6 @@
     "reset": "Sıfırla",
     "next": "Sonraki Rutin",
     "use": "Kullan",
-    "watchAdOrBuy": "Reklam İzle veya Satın Al",
     "create": "Oluştur",
     "export": "Dışa Aktar",
     "clear": "Temizle",

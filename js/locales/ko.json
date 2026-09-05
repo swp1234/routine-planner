@@ -20,6 +20,7 @@
   },
   "routine": {
     "defaultQuote": "✨ \"하루를 목적 있게 시작하세요.\"",
+    "boundary": "입력한 루틴은 이 브라우저에만 저장됩니다. AI 분석이나 성과 향상을 약속하지 않습니다.",
     "noneSelected": "선택된 루틴 없음",
     "weeklyGoal": "주간 달성",
     "none": "-- 없음 --"
@@ -52,10 +53,6 @@
     "sport": "운동형",
     "sportDesc": "운동 최우선"
   },
-  "premium": {
-    "aiOptimization": "✨ AI 루틴 최적화 제안",
-    "aiDescription": "AI가 당신의 루틴을 분석하고 최적화 제안을 해줍니다."
-  },
   "settings": {
     "title": "설정",
     "notifications": "알림",
@@ -75,7 +72,6 @@
     "reset": "리셋",
     "next": "다음 루틴",
     "use": "사용",
-    "watchAdOrBuy": "광고 보기 또는 구매",
     "create": "생성",
     "export": "내보내기",
     "clear": "초기화",

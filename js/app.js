@@ -3,6 +3,50 @@
  * Features: Routine scheduling, timer, calendar tracking, templates, sharing
  */
 
+const ROUTINE_EVENTS = new Set([
+    'routine_planner_view', 'routine_plan_create', 'routine_timer_start',
+    'routine_task_complete', 'routine_export', 'routine_share_success', 'routine_related_click'
+]);
+const ROUTINE_SOURCES = new Set(['direct', 'en_stress_habit_quick', 'es_stress_habit_quick', 'zh_stress_habit_quick']);
+const sentRoutineEvents = new Set();
+
+function trackRoutineStage(name) {
+    if (!ROUTINE_EVENTS.has(name) || sentRoutineEvents.has(name)) return;
+    sentRoutineEvents.add(name);
+    if (typeof gtag === 'function') {
+        const requestedSource = new URLSearchParams(window.location.search).get('surface') || 'direct';
+        gtag('event', name, {
+            event_category: 'routine_planner',
+            page_language: i18n && typeof i18n.getCurrentLanguage === 'function' ? i18n.getCurrentLanguage() : 'en',
+            entry_source: ROUTINE_SOURCES.has(requestedSource) ? requestedSource : 'direct'
+        });
+    }
+}
+
+function escapeHTML(value) {
+    const node = document.createElement('div');
+    node.textContent = String(value);
+    return node.innerHTML;
+}
+
+function shareURL() {
+    const url = new URL('/routine-planner/', window.location.origin);
+    const lang = i18n && typeof i18n.getCurrentLanguage === 'function' ? i18n.getCurrentLanguage() : 'en';
+    url.searchParams.set('lang', lang);
+    return url.href;
+}
+
+async function shareApp() {
+    const data = { title: document.title, url: shareURL() };
+    try {
+        if (navigator.share) await navigator.share(data);
+        else await navigator.clipboard.writeText(data.url);
+        trackRoutineStage('routine_share_success');
+    } catch (error) {
+        // Cancellation and clipboard denial are not successful shares.
+    }
+}
+
 class RoutineApp {
     constructor() {
         this.routines = [];
@@ -23,6 +67,7 @@ class RoutineApp {
         this.updateUI();
         this.displayDailyQuote();
         this.registerServiceWorker();
+        trackRoutineStage('routine_planner_view');
     }
 
     /* ============================================================
@@ -64,6 +109,7 @@ class RoutineApp {
         a.download = `routine-data-${new Date().getTime()}.json`;
         a.click();
         URL.revokeObjectURL(url);
+        trackRoutineStage('routine_export');
     }
 
     clearAllData() {
@@ -135,8 +181,9 @@ class RoutineApp {
         document.getElementById('download-card-btn').addEventListener('click', () => this.downloadShareCard());
         document.getElementById('copy-card-btn').addEventListener('click', () => this.copyShareCard());
 
-        // Premium AI
-        document.getElementById('premium-ai-btn').addEventListener('click', () => this.showAIPremiumAd());
+        document.addEventListener('click', event => {
+            if (event.target.closest('[data-routine-related]')) trackRoutineStage('routine_related_click');
+        });
 
         // Language change event
         window.addEventListener('languageChanged', () => this.updateUI());
@@ -199,7 +246,7 @@ class RoutineApp {
 
     addRoutine() {
         const name = document.getElementById('routine-name').value.trim();
-        const duration = parseInt(document.getElementById('routine-duration').value) || 15;
+        const duration = Math.min(180, Math.max(1, parseInt(document.getElementById('routine-duration').value) || 15));
         const icon = document.getElementById('routine-icon').value;
 
         if (!name) {
@@ -219,6 +266,7 @@ class RoutineApp {
         this.saveData();
         this.updateRoutineList();
         this.toggleAddForm();
+        trackRoutineStage('routine_plan_create');
 
         // Reset form
         document.getElementById('routine-name').value = '';
@@ -240,6 +288,7 @@ class RoutineApp {
             this.saveData();
             this.updateRoutineList();
             this.updateProgress();
+            if (routine.completed) trackRoutineStage('routine_task_complete');
         }
     }
 
@@ -258,10 +307,10 @@ class RoutineApp {
             li.draggable = true;
             li.dataset.id = routine.id;
             li.innerHTML = `
-                <div class="routine-icon">${routine.icon}</div>
+                <div class="routine-icon">${escapeHTML(routine.icon)}</div>
                 <div class="routine-info">
-                    <div class="routine-name">${routine.name}</div>
-                    <div class="routine-duration">${routine.duration}${i18n.t('unit.minute')}</div>
+                    <div class="routine-name">${escapeHTML(routine.name)}</div>
+                    <div class="routine-duration">${escapeHTML(routine.duration)}${escapeHTML(i18n.t('unit.minute'))}</div>
                 </div>
                 <input type="checkbox" class="routine-checkbox" ${routine.completed ? 'checked' : ''}>
                 <button class="routine-delete">🗑️</button>
@@ -386,6 +435,7 @@ class RoutineApp {
         if (this.timerRunning) return;
 
         this.timerRunning = true;
+        trackRoutineStage('routine_timer_start');
         document.getElementById('timer-start-btn').classList.add('hidden');
         document.getElementById('timer-pause-btn').classList.remove('hidden');
 
@@ -430,6 +480,7 @@ class RoutineApp {
             this.saveData();
             this.updateRoutineList();
             this.notify(this.currentTimerRoutine.name + ' ' + i18n.t('planner.completed') + '!');
+            trackRoutineStage('routine_task_complete');
         }
         this.nextRoutine();
     }
@@ -578,6 +629,7 @@ class RoutineApp {
         this.saveData();
         this.updateRoutineList();
         this.switchTab('planner');
+        trackRoutineStage('routine_plan_create');
         this.notify(templateName + ' ' + i18n.t('planner.routines') + ' ' + i18n.t('button.copy') + '!');
     }
 
@@ -614,9 +666,9 @@ class RoutineApp {
         const totalTime = this.routines.reduce((sum, r) => sum + r.duration, 0);
         const routinesHtml = this.routines.map(r => `
             <div class="share-card-routine">
-                <span class="share-card-routine-icon">${r.icon}</span>
-                <span>${r.name}</span>
-                <span style="margin-left: auto; color: var(--color-text-secondary);">${r.duration}${i18n.t('unit.minute')}</span>
+                <span class="share-card-routine-icon">${escapeHTML(r.icon)}</span>
+                <span>${escapeHTML(r.name)}</span>
+                <span style="margin-left: auto; color: var(--color-text-secondary);">${escapeHTML(r.duration)}${escapeHTML(i18n.t('unit.minute'))}</span>
             </div>
         `).join('');
 
@@ -680,25 +732,18 @@ class RoutineApp {
         a.href = canvas2Image;
         a.download = 'my-morning-routine.png';
         a.click();
+        trackRoutineStage('routine_share_success');
     }
 
-    copyShareCard() {
+    async copyShareCard() {
         const text = this.routines.map(r => r.icon + ' ' + r.name + ' (' + r.duration + i18n.t('unit.minute') + ')').join('\n');
-        navigator.clipboard.writeText(i18n.t('shareCard.headerText') + ':\n\n' + text + '\n\n' + i18n.t('shareCard.wakeupLabel') + ': ' + this.wakeupTime);
-        this.notify(i18n.t('shareCard.copied') + '!');
-    }
-
-    /* ============================================================
-       PREMIUM FEATURES
-       ============================================================ */
-
-    showAIPremiumAd() {
-        // Show ad or premium purchase dialog
-        alert('AI 루틴 최적화 제안:\n\n' +
-            '당신의 루틴을 분석한 결과:\n' +
-            '- 아침 7시 기상이 최적입니다\n' +
-            '- 총 소요시간을 15분 단축할 수 있습니다\n' +
-            '- 운동 후 샤워 순서를 권장합니다');
+        try {
+            await navigator.clipboard.writeText(i18n.t('shareCard.headerText') + ':\n\n' + text + '\n\n' + i18n.t('shareCard.wakeupLabel') + ': ' + this.wakeupTime);
+            this.notify(i18n.t('shareCard.copied') + '!');
+            trackRoutineStage('routine_share_success');
+        } catch (error) {
+            // Clipboard denial is not a successful share.
+        }
     }
 
     /* ============================================================
@@ -722,9 +767,7 @@ class RoutineApp {
 
     registerServiceWorker() {
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js', { scope: '/routine-planner/' }).catch(err => {
-                console.log('ServiceWorker registration failed:', err);
-            });
+            navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(() => {});
         }
     }
 }

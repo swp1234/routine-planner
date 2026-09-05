@@ -20,6 +20,7 @@
   },
   "routine": {
     "defaultQuote": "✨ \"Comece seu dia com propósito.\"",
+    "boundary": "Sua rotina fica salva apenas neste navegador. A ferramenta não usa IA nem promete resultados.",
     "noneSelected": "Nenhuma rotina selecionada",
     "weeklyGoal": "Progresso semanal",
     "none": "-- Nenhum --"
@@ -52,10 +53,6 @@
     "sport": "Esporte",
     "sportDesc": "Prioridade em exercício"
   },
-  "premium": {
-    "aiOptimization": "✨ Otimização de Rotina com IA",
-    "aiDescription": "IA analisa sua rotina e fornece sugestões de otimização."
-  },
   "settings": {
     "title": "Configurações",
     "notifications": "Notificações",
@@ -75,7 +72,6 @@
     "reset": "Reiniciar",
     "next": "Próxima Rotina",
     "use": "Usar",
-    "watchAdOrBuy": "Assistir Anúncio ou Comprar",
     "create": "Criar",
     "export": "Exportar",
     "clear": "Limpar",

@@ -20,6 +20,7 @@
   },
   "routine": {
     "defaultQuote": "✨ \"Commencez votre journée avec intention.\"",
+    "boundary": "Votre routine reste enregistrée dans ce navigateur. Cet outil n’utilise pas d’IA et ne promet aucun résultat.",
     "noneSelected": "Aucune routine sélectionnée",
     "weeklyGoal": "Progression hebdomadaire",
     "none": "-- Aucun --"
@@ -52,10 +53,6 @@
     "sport": "Sport",
     "sportDesc": "Priorité au sport"
   },
-  "premium": {
-    "aiOptimization": "✨ Optimisation de Routine par IA",
-    "aiDescription": "L'IA analyse votre routine et fournit des suggestions d'optimisation."
-  },
   "settings": {
     "title": "Paramètres",
     "notifications": "Notifications",
@@ -75,7 +72,6 @@
     "reset": "Réinitialiser",
     "next": "Routine Suivante",
     "use": "Utiliser",
-    "watchAdOrBuy": "Regarder une Annonce ou Acheter",
     "create": "Créer",
     "export": "Exporter",
     "clear": "Effacer",

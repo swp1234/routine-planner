@@ -1,127 +1,26 @@
-/**
- * Service Worker - Morning Routine Planner
- * Enables offline functionality and caching
- */
+const CACHE = 'routine-planner-v3';
+const ASSETS = ['./', './index.html', './manifest.json', './css/style.css', './js/app.js', './js/i18n.js',
+  ...['ko','en','ja','zh','es','pt','id','tr','de','fr','hi','ru'].map((lang) => `./js/locales/${lang}.json`),
+  './icon-192.svg', './icon-512.svg'];
 
-const CACHE_NAME = 'routine-planner-v2';
-const urlsToCache = [
-    '/routine-planner/',
-    '/routine-planner/index.html',
-    '/routine-planner/manifest.json',
-    '/routine-planner/css/style.css',
-    '/routine-planner/js/app.js',
-    '/routine-planner/js/i18n.js',
-    '/routine-planner/js/locales/ko.json',
-    '/routine-planner/js/locales/en.json',
-    '/routine-planner/js/locales/ja.json',
-    '/routine-planner/js/locales/zh.json',
-    '/routine-planner/js/locales/es.json',
-    '/routine-planner/js/locales/pt.json',
-    '/routine-planner/js/locales/id.json',
-    '/routine-planner/js/locales/tr.json',
-    '/routine-planner/js/locales/de.json',
-    '/routine-planner/js/locales/fr.json',
-    '/routine-planner/js/locales/hi.json',
-    '/routine-planner/js/locales/ru.json',
-    '/routine-planner/icon-192.svg',
-    '/routine-planner/icon-512.svg'
-];
-
-// Install event
-self.addEventListener('install', event => {
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(cache => {
-                console.log('Opened cache');
-                return cache.addAll(urlsToCache).catch(err => {
-                    console.log('Some resources failed to cache', err);
-                });
-            })
-    );
-    self.skipWaiting();
+self.addEventListener('install', (event) => {
+  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(ASSETS)));
+  self.skipWaiting();
 });
 
-// Activate event
-self.addEventListener('activate', event => {
-    const cacheWhitelist = [CACHE_NAME];
-    event.waitUntil(
-        caches.keys().then(cacheNames => {
-            return Promise.all(
-                cacheNames.map(cacheName => {
-                    if (!cacheWhitelist.includes(cacheName)) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
-        })
-    );
-    self.clients.claim();
+self.addEventListener('activate', (event) => {
+  event.waitUntil(caches.keys().then((names) => Promise.all(names
+    .filter((name) => name.startsWith('routine-planner') && name !== CACHE)
+    .map((name) => caches.delete(name)))).then(() => self.clients.claim()));
 });
 
-// Fetch event
-self.addEventListener('fetch', event => {
-    // Network first strategy
-    event.respondWith(
-        fetch(event.request)
-            .then(response => {
-                // Clone the response
-                if (!response || response.status !== 200 || response.type === 'error') {
-                    return response;
-                }
-
-                const responseToCache = response.clone();
-                caches.open(CACHE_NAME)
-                    .then(cache => {
-                        cache.put(event.request, responseToCache);
-                    });
-
-                return response;
-            })
-            .catch(() => {
-                // Fallback to cache
-                return caches.match(event.request)
-                    .then(response => {
-                        return response || new Response('Offline - requested resource not cached', {
-                            status: 503,
-                            statusText: 'Service Unavailable',
-                            headers: new Headers({
-                                'Content-Type': 'text/plain'
-                            })
-                        });
-                    });
-            })
-    );
-});
-
-// Background sync for notifications
-self.addEventListener('sync', event => {
-    if (event.tag === 'routine-notification') {
-        event.waitUntil(
-            self.registration.showNotification('Morning Routine Reminder', {
-                body: 'Time to start your morning routine!',
-                icon: '/icon-192.svg',
-                badge: '/icon-192.svg',
-                tag: 'routine-reminder',
-                requireInteraction: true
-            })
-        );
-    }
-});
-
-// Notification click
-self.addEventListener('notificationclick', event => {
-    event.notification.close();
-    event.waitUntil(
-        clients.matchAll({ type: 'window' })
-            .then(clientList => {
-                for (const client of clientList) {
-                    if (client.url === '/' && 'focus' in client) {
-                        return client.focus();
-                    }
-                }
-                if (clients.openWindow) {
-                    return clients.openWindow('/');
-                }
-            })
-    );
+self.addEventListener('fetch', (event) => {
+  const url = new URL(event.request.url);
+  if (event.request.method !== 'GET' || url.origin !== self.location.origin || !url.pathname.startsWith('/routine-planner/')) return;
+  event.respondWith(fetch(event.request).then((response) => {
+    if (!response.ok || response.type !== 'basic') return response;
+    const copy = response.clone();
+    event.waitUntil(caches.open(CACHE).then((cache) => cache.put(event.request, copy)));
+    return response;
+  }).catch(() => caches.match(event.request).then((cached) => cached || caches.match('./index.html'))));
 });

@@ -20,6 +20,7 @@
   },
   "routine": {
     "defaultQuote": "✨ \"Mulailah harimu dengan tujuan.\"",
+    "boundary": "Rutinitas Anda hanya tersimpan di browser ini. Alat ini tidak memakai AI atau menjanjikan hasil.",
     "noneSelected": "Tidak ada rutinitas dipilih",
     "weeklyGoal": "Kemajuan mingguan",
     "none": "-- Tidak ada --"
@@ -52,10 +53,6 @@
     "sport": "Olahraga",
     "sportDesc": "Prioritas pada olahraga"
   },
-  "premium": {
-    "aiOptimization": "✨ Optimasi Rutinitas AI",
-    "aiDescription": "AI menganalisis rutinitas Anda dan memberikan saran optimasi."
-  },
   "settings": {
     "title": "Pengaturan",
     "notifications": "Notifikasi",
@@ -75,7 +72,6 @@
     "reset": "Reset",
     "next": "Rutinitas Berikutnya",
     "use": "Gunakan",
-    "watchAdOrBuy": "Tonton Iklan atau Beli",
     "create": "Buat",
     "export": "Ekspor",
     "clear": "Hapus",

@@ -20,6 +20,7 @@
   },
   "routine": {
     "defaultQuote": "✨ \"Beginne deinen Tag mit Ziel.\"",
+    "boundary": "Deine Routine bleibt nur in diesem Browser gespeichert. Das Tool nutzt keine KI und verspricht kein Ergebnis.",
     "noneSelected": "Kein Routine ausgewählt",
     "weeklyGoal": "Wöchentlicher Fortschritt",
     "none": "-- Keiner --"
@@ -52,10 +53,6 @@
     "sport": "Sport",
     "sportDesc": "Priorität auf Sport"
   },
-  "premium": {
-    "aiOptimization": "✨ KI-Routine-Optimierung",
-    "aiDescription": "KI analysiert Ihre Routine und bietet Optimierungsvorschläge."
-  },
   "settings": {
     "title": "Einstellungen",
     "notifications": "Benachrichtigungen",
@@ -75,7 +72,6 @@
     "reset": "Zurücksetzen",
     "next": "Nächste Routine",
     "use": "Verwenden",
-    "watchAdOrBuy": "Anzeige ansehen oder kaufen",
     "create": "Erstellen",
     "export": "Exportieren",
     "clear": "Löschen",

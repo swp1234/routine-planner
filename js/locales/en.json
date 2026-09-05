@@ -20,6 +20,7 @@
   },
   "routine": {
     "defaultQuote": "✨ \"Start your day with purpose.\"",
+    "boundary": "Your routine stays in this browser. This tool does not use AI or promise an outcome.",
     "noneSelected": "No routine selected",
     "weeklyGoal": "Weekly Progress",
     "none": "-- None --"
@@ -52,10 +53,6 @@
     "sport": "Sport",
     "sportDesc": "Focus on exercise first"
   },
-  "premium": {
-    "aiOptimization": "✨ AI Routine Optimization",
-    "aiDescription": "AI analyzes your routine and provides optimization suggestions."
-  },
   "settings": {
     "title": "Settings",
     "notifications": "Notifications",
@@ -75,7 +72,6 @@
     "reset": "Reset",
     "next": "Next Routine",
     "use": "Use",
-    "watchAdOrBuy": "Watch Ad or Buy",
     "create": "Create",
     "export": "Export",
     "clear": "Clear",

@@ -20,6 +20,7 @@
   },
   "routine": {
     "defaultQuote": "✨ \"目的を持って一日を始めよう。\"",
+    "boundary": "入力したルーティンはこのブラウザだけに保存されます。AI分析や成果を約束する機能ではありません。",
     "noneSelected": "ルーティン未選択",
     "weeklyGoal": "週次達成",
     "none": "-- なし --"
@@ -52,10 +53,6 @@
     "sport": "スポーツ型",
     "sportDesc": "運動を最優先"
   },
-  "premium": {
-    "aiOptimization": "✨ AI ルーティン最適化提案",
-    "aiDescription": "AIがあなたのルーティンを分析し、最適化の提案を行います。"
-  },
   "settings": {
     "title": "設定",
     "notifications": "通知",
@@ -75,7 +72,6 @@
     "reset": "リセット",
     "next": "次のルーティン",
     "use": "使用",
-    "watchAdOrBuy": "広告を見るまたは購入",
     "create": "作成",
     "export": "エクスポート",
     "clear": "クリア",

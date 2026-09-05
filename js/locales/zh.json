@@ -20,6 +20,7 @@
   },
   "routine": {
     "defaultQuote": "✨ \"有目的地开始新的一天。\"",
+    "boundary": "你输入的日程只保存在此浏览器中。本工具不使用 AI，也不承诺任何结果。",
     "noneSelected": "未选择例程",
     "weeklyGoal": "周进度",
     "none": "-- 无 --"
@@ -52,10 +53,6 @@
     "sport": "运动型",
     "sportDesc": "优先运动"
   },
-  "premium": {
-    "aiOptimization": "✨ AI例程优化建议",
-    "aiDescription": "AI分析您的例程并提供优化建议。"
-  },
   "settings": {
     "title": "设置",
     "notifications": "通知",
@@ -75,7 +72,6 @@
     "reset": "重置",
     "next": "下一个例程",
     "use": "使用",
-    "watchAdOrBuy": "观看广告或购买",
     "create": "创建",
     "export": "导出",
     "clear": "清除",
