@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* Skip Link */
-.skip-link { position:absolute; top:-40px; left:0; background:var(--color-primary, #f1c40f); color:#fff; padding:8px 16px; z-index:10001; transition:top 0.3s; font-size:14px; text-decoration:none; }
+.skip-link { position:absolute; top:-100px; left:0; min-height:44px; display:inline-flex; align-items:center; box-sizing:border-box; background:var(--color-primary, #f1c40f); color:#fff; padding:8px 16px; z-index:10001; transition:top 0.3s; font-size:14px; text-decoration:none; }
 .skip-link:focus { top:0; }
 
 :root {
